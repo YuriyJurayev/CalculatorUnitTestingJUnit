@@ -20,15 +20,26 @@ public class IsNegativeCalculatorTest extends BaseTest {
     public void isNegativeTest(){
         boolean result = calc.isNegative(a);
         System.out.println("is " + a + " the negative number " + "= "+ result);
-        Assert.assertTrue(result);
+        if(a < 0){
+            Assert.assertTrue("Result is positive",result);
+        }else{
+
+            Assert.assertFalse("Result is negative",result);
+        }
     }
 
     @Parameterized.Parameters
     public static Collection data(){
-        return Arrays.asList(new Object[][]{ // only the 3rd test should be passed
+        return Arrays.asList(new Object[][]{
+                {3440},
+                {111},
                 {11},
+                {1},
                 {0},
-                {-1}
+                {-1},
+                {-3440},
+                {-111},
+                {-11},
         });
     }
 }
