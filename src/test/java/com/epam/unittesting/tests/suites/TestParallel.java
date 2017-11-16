@@ -25,11 +25,11 @@ public class TestParallel {
                 SinCalculatorTest.class,
                 IsPositiveCalculatorTest.class,
                 IsNegativeCalculatorTest.class};
-        //parallel among classes
+
         JUnitCore.runClasses(ParallelComputer.classes(), parallel);
-        // Parallel among methods in a class
+
         JUnitCore.runClasses(ParallelComputer.methods(), parallel);
-        // Parallel all methods in all classes
+
         JUnitCore.runClasses(new ParallelComputer(true, true), parallel);
 
     }
