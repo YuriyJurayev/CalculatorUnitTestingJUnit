@@ -28,7 +28,7 @@ public class DivDoubleCalculatorTest extends BaseTest {
         try{
             result = calc.div(a, b);
             System.out.println("division: " + a + " / " + b + " = " + result);
-            Assert.assertEquals(expected, result, 0.0);
+            Assert.assertEquals("Expected and actual results aren't equal",expected, result, 0.0);
         }catch (NumberFormatException e){
             System.out.println("division by zero: " + a + " / " + b + " is strongly prohibited!");
         }
@@ -44,8 +44,8 @@ public class DivDoubleCalculatorTest extends BaseTest {
                 {22.8006, 4.78, 4.77},
                 {4.77, 1, 4.77},
                 {0, 4, 0},
-                {4.2, 0, 0},  //bug - returns Infinity
-                {0.000, 0, 0}  //bug - returns NaN   see package com.epam.unittesting.tests.bugsresolutionexamples.DivDoubleByZero
+                {4.2, 0, 0},
+                {0.000, 0, 0}
         });
     }
 }

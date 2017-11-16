@@ -22,7 +22,7 @@ public class CtgCalculatorTest extends BaseTest {
     public void ctgTest() {
         double result = calc.ctg(Math.toRadians(a));
         System.out.println("ctangent of " + a + " degree " + " = " + result);
-        Assert.assertEquals(expected, result, 0.0);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result, 0.0);
     }
 
     @Parameterized.Parameters
@@ -31,7 +31,6 @@ public class CtgCalculatorTest extends BaseTest {
                 {30.0, 1.732},
                 {45, 1},
                 {60.0, 0.577}
-                // method returns the hyperbolic tangent
         });
     }
 }

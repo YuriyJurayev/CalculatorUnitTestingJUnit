@@ -24,7 +24,7 @@ public class SubCalculatorTest extends BaseTest {
     public void subTest(){
         long result = calc.sub(a, b);
         System.out.println("subtraction: " + a + " - " + b + " = " + result);
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result);
     }
 
     @Parameterized.Parameters

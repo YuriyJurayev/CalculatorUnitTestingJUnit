@@ -26,7 +26,7 @@ public class SumCalculatorTest extends BaseTest {
     public void testSum() {
         long result = calc.sum(a, b);
         System.out.println("sum: " + a + " + " + b + " = " + result);
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result);
 
     }
 

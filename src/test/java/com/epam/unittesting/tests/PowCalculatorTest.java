@@ -26,7 +26,7 @@ public class PowCalculatorTest extends BaseTest {
     public void powTest() {
         double result = calc.pow(a, b);
         System.out.println("exponentiation: number " + a + " in " + b + " = " + result);
-        Assert.assertEquals(expected, result, 0.0);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result, 0.0);
     }
 
     @Parameterized.Parameters

@@ -28,7 +28,7 @@ public class DivCalculatorTest extends BaseTest {
         try{
             result = calc.div(a, b);
             System.out.println("division: " + a + " / " + b + " = " + result);
-            Assert.assertEquals(expected, result);
+            Assert.assertEquals("Expected and actual results aren't equal",expected, result);
         }catch (NumberFormatException e){
             System.out.println("division by zero: " + a + " / " + b + " is strongly prohibited!");
         }

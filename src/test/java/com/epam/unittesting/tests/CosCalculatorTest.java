@@ -22,7 +22,7 @@ public class CosCalculatorTest extends BaseTest {
     public void cosTest() {
         double result = calc.cos(Math.toRadians(a));
         System.out.println("cos of " + a + " degree" + " = " + result);
-        Assert.assertEquals(expected, result, 0.0);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result, 0.0);
     }
 
     @Parameterized.Parameters
@@ -30,7 +30,6 @@ public class CosCalculatorTest extends BaseTest {
         return Arrays.asList(new Object[][]{
                 {1, 0.54030230586814},
                 {50, 0.96496602849211}
-                ///method always returns sin(a)
         });
     }
 }

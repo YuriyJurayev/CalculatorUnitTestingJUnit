@@ -23,7 +23,7 @@ public class SqrtCalculatorTest extends BaseTest {
     public void sqrtTest() {
         double result = calc.sqrt(a);
         System.out.println("sqrt of " + a + " is " + result);
-        Assert.assertEquals( expected, result, 0.0);
+        Assert.assertEquals("Expected and actual results aren't equal", expected, result, 0.0);
     }
 
     @Parameterized.Parameters

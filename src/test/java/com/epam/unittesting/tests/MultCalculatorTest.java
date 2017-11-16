@@ -27,7 +27,7 @@ public class MultCalculatorTest extends BaseTest {
     public void multTest(){
         long result = calc.mult(a, b);
         System.out.println("multiplication: " + a + " * " + b + " = " + result);
-        Assert.assertEquals(expected,result);
+        Assert.assertEquals("Expected and actual results aren't equal",expected,result);
     }
 
     @Parameterized.Parameters

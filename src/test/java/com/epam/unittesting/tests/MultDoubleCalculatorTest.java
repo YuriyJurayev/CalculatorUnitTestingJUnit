@@ -27,18 +27,18 @@ public class MultDoubleCalculatorTest extends BaseTest {
     public void multTest(){
         double result = calc.mult(a, b);
         System.out.println("multiplication: " + a + " * " + b + " = " + result);
-        Assert.assertEquals(expected, result, 0.0);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result, 0.0);
     }
 
     @Parameterized.Parameters
     public static Collection data(){
         return Arrays.asList(new Object[][]{
-                {1.1, 2, 2.2},  //bug
-                {5.5, 5.5, 30.25},  //bug
+                {1.1, 2, 2.2},
+                {5.5, 5.5, 30.25},
                 {10, -15.1, -151},
                 {-10, -15, 150},
-                {4.77, 4.78, 22.8006}, //bug
-                {4.77, 1, 4.77},    ///bug
+                {4.77, 4.78, 22.8006},
+                {4.77, 1, 4.77},
                 {4.1, 0, 0},
                 {0, 4.1, 0}
         });

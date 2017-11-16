@@ -20,9 +20,9 @@ public class SinCalculatorTest extends BaseTest {
 
     @Test()
     public void sinTest() {
-        double result = calc.sin(Math.toRadians(a));  ///convert degrees to radians
+        double result = calc.sin(Math.toRadians(a));
         System.out.println("sin of " + a + " degree" + " = " + result);
-        Assert.assertEquals(expected, result, 0.0);
+        Assert.assertEquals("Expected and actual results aren't equal",expected, result, 0.0);
     }
 
     @Parameterized.Parameters
