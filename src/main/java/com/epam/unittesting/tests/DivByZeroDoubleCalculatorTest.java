@@ -1,6 +1,5 @@
 package com.epam.unittesting.tests;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -33,8 +32,8 @@ public class DivByZeroDoubleCalculatorTest extends BaseTest {
                 {151, 0},
                 {-150, 0},
                 {22.8006, 0},
-                {4.77, 0},
-                {0, 0},
+                {4.77, 0.0},
+                {0.0, 0.0},
                 {4.2, 0},
                 {0.000, 0}
         });
