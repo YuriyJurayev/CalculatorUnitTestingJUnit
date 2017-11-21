@@ -11,31 +11,29 @@ import java.util.Collection;
 public class DivByZeroDoubleCalculatorTest extends BaseTest {
 
     private double a;
-    private double b;
 
-    public DivByZeroDoubleCalculatorTest(double a, double b) {
+    public DivByZeroDoubleCalculatorTest(double a) {
         this.a = a;
-        this.b = b;
     }
 
     @Test(expected = ArithmeticException.class)
     public void DivByZeroDoubleTest(){
-        System.out.println("division: " + a + " / " + b);
-        calc.div(a, b);
+        System.out.println("division: " + a + " / " + 0);
+        calc.div(a, 0);
     }
 
     @Parameterized.Parameters
     public static Collection data(){
         return Arrays.asList(new Object[][]{
-                {2.2, 0},
-                {30.25, 0},
-                {151, 0},
-                {-150, 0},
-                {22.8006, 0},
-                {4.77, 0.0},
-                {0.0, 0.0},
-                {4.2, 0},
-                {0.000, 0}
+                {2.2},
+                {30.25},
+                {151},
+                {-150},
+                {22.8006},
+                {4.77},
+                {0.0},
+                {4.2},
+                {0.000}
         });
     }
 }
