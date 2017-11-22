@@ -1,4 +1,4 @@
-package com.epam.unittesting.tests;
+package kz.epam.unittesting.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,16 +8,16 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class DivByZeroCalculatorTest extends BaseTest {
+public class DivByZeroDoubleCalculatorTest extends BaseTest {
 
-    private long a;
+    private double a;
 
-    public DivByZeroCalculatorTest(long a) {
+    public DivByZeroDoubleCalculatorTest(double a) {
         this.a = a;
     }
 
-    @Test(expected = NumberFormatException.class)
-    public void divByZeroTest(){
+    @Test(expected = ArithmeticException.class)
+    public void DivByZeroDoubleTest(){
         System.out.println("division: " + a + " / " + 0);
         calc.div(a, 0);
     }
@@ -25,13 +25,15 @@ public class DivByZeroCalculatorTest extends BaseTest {
     @Parameterized.Parameters
     public static Collection data(){
         return Arrays.asList(new Object[][]{
-                {160},
-                {25},
+                {2.2},
+                {30.25},
+                {151},
                 {-150},
-                {-150},
-                {0},
-                {4},
-                {0}
+                {22.8006},
+                {4.77},
+                {0.0},
+                {4.2},
+                {0.000}
         });
     }
 }

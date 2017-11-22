@@ -1,4 +1,4 @@
-package com.epam.unittesting.tests;
+package kz.epam.unittesting.tests;
 
 
 import org.junit.Assert;
