@@ -1,7 +1,6 @@
 package kz.epam.unittesting.suites;
 
 import kz.epam.unittesting.tests.*;
-import unittesting.tests.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
